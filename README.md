@@ -97,6 +97,30 @@ npm run dev
 
 ---
 
+## 🧠 Banco de Dados
+
+A aplicação utiliza banco de dados relacional hospedado no [NeonDB](https://neon.tech), utilizando o ORM [Drizzle](https://orm.drizzle.team/).
+
+- Banco: PostgreSQL
+- ORM: Drizzle ORM
+- Arquivos de schema: `src/db/schema.ts`
+- Configuração: `drizzle.config.ts`
+- Migrations: geradas na pasta `/drizzle`
+
+### 🔄 Relacionamentos modelados
+
+- Usuário ↔ Clínica (N:N)
+- Clínica → Médicos, Pacientes, Agendamentos (1:N)
+- Médico → Agendamentos (1:N)
+- Paciente → Agendamentos (1:N)
+
+### 📊 Diagrama ER
+
+A modelagem pode ser visualizada no diagrama abaixo:
+
+![Diagrama ER do projeto](docs/doutor-agenda.png)
+
+
 ## 🤝 Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma [issue](https://github.com/seuusuario/doutor-agenda/issues) ou enviar um PR.
