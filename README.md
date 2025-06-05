@@ -1,24 +1,26 @@
 # 🩺 Doutor Agenda
 
-![Status](https://img.shields.io/badge/status-Em%20Desenvolvimento-blueviolet?style=for-the-badge)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
-![License](https://img.shields.io/github/license/vivianedev/doutor-agenda?style=for-the-badge)
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-blue?style=flat-square)
+![TypeScript](https://img.shields.io/badge/Made_with-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Frontend-Next.js-black?style=flat-square&logo=next.js)
+![NestJS](https://img.shields.io/badge/Backend-NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
+![Drizzle ORM](https://img.shields.io/badge/ORM-Drizzle-00C896?style=flat-square)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![License](https://img.shields.io/github/license/seuusuario/doutor-agenda?style=flat-square)
 
 > Sistema de agendamento de consultas para clínicas, com autenticação, gestão de médicos e pacientes, planos e agendamentos.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias principais
 
-<p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" alt="TypeScript"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="40" alt="Next.js"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="40" alt="TailwindCSS"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" width="40" alt="ESLint"/>
-</p>
+- 🧠 **TypeScript**
+- ⚙️ **Next.js** (Frontend)
+- 🛠️ **NestJS** (Backend)
+- 🧬 **Drizzle ORM** (Banco relacional)
+- 🐘 **PostgreSQL**
+- 🎨 **TailwindCSS**
+- 🔧 **ESLint & Prettier**
 
 ---
 
@@ -67,7 +69,7 @@ doutor-agenda/
 
 ```bash
 # Clone o projeto
-git clone https://github.com/vivianedev/doutor-agenda.git
+git clone https://github.com/seuusuario/doutor-agenda.git
 
 # Acesse o diretório
 cd doutor-agenda
@@ -95,9 +97,33 @@ npm run dev
 
 ---
 
+## 🧠 Banco de Dados
+
+A aplicação utiliza banco de dados relacional hospedado no [NeonDB](https://neon.tech), utilizando o ORM [Drizzle](https://orm.drizzle.team/).
+
+- Banco: PostgreSQL
+- ORM: Drizzle ORM
+- Arquivos de schema: `src/db/schema.ts`
+- Configuração: `drizzle.config.ts`
+- Migrations: geradas na pasta `/drizzle`
+
+### 🔄 Relacionamentos modelados
+
+- Usuário ↔ Clínica (N:N)
+- Clínica → Médicos, Pacientes, Agendamentos (1:N)
+- Médico → Agendamentos (1:N)
+- Paciente → Agendamentos (1:N)
+
+### 📊 Diagrama ER
+
+A modelagem pode ser visualizada no diagrama abaixo:
+
+![Diagrama ER do projeto](docs/doutor-agenda.png)
+
+
 ## 🤝 Contribuições
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma [issue](https://github.com/vivianedev/doutor-agenda/issues) ou enviar um PR.
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma [issue](https://github.com/seuusuario/doutor-agenda/issues) ou enviar um PR.
 
 ---
 
