@@ -14,4 +14,8 @@
     "eslint.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
     },
+    "cSpell.words": [
+        "name",
+        "uuid"
+    ],
 }
